@@ -1,0 +1,38 @@
+footer{
+background-color: black;
+}
+
+footer img{
+	width: 50px;
+}
+footer p {
+	color: white;
+}
+
+.texto p{
+	text-align: center;
+}
+.texto h1{
+	text-align: center;
+}
+.texto h3{
+	text-align: center;
+}
+.texto2 div{
+	text-align: center;
+}
+
+.texto2 div p{
+	text-align: left;
+}
+.texto2 h1{
+	text-align: center;
+}
+
+.texto3 h1{
+	text-align: center;
+}
+
+.texto4 h1{
+	text-align: center;
+}

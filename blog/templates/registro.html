@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/registro.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="{% url 'inicio' %}">Inicio</a>
+        <a href="{% url 'promociones' %}">Promociones</a>
+        <a href="{% url 'galeria' %}">Galeria</a>
+        <a href="{% url 'registro' %}" >Registro</a>
+        <a href="{% url 'contacto' %}" class="active">Contacto</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+    <div class="loginbox">
+        <p class="avatar"><img src="{% static 'img/1.jpg' %}" alt="logo"></p>
+        <h1>Login </h1>
+            <label id="username">Nombre de usuario </label>
+            <input type="text" placeholder="Ingrese Nombre de usuario" required>
+
+            <label id="password">Contraseña</label>
+            <input type="password" placeholder="Ingrese contraseña" required>
+        
+            <input type="submit" value="iniciar sesion">
+
+            <a href="#"> Perdi mi contraseña</a>
+            <a href="{% url 'nocuenta' %}">No tengo cuenta</a>
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    padding: 0;
+	background: url(../img/fondo.jpg) no-repeat center top;
+	background-size: cover;
+    font-family: sans-serif;
+    height: 100%;
+}
+
+.cuentabox{
+    width: 320px;
+	height: 500px;
+	background: black;
+	color: white;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 30px;
+}
+.cuentabox form input{
+    width: 100%;
+	margin-bottom: 3px;
+}
+
+
+.cuentabox h1 {
+    text-align: center;
+    font-size: 22px; 
+}
+
+.cuentabox label{
+    font-weight: bold;
+    display: block;
+}
+.cuentabox input{
+    width: 100%;
+}
+
+a {
+	color: yellow;
+}	
+
+.avatar{
+	text-align: center;
+}
+
+#btn{
+	width: 101.5%;
+	margin-top: 5px;
+}
+
+img{
+	width:80px;
+}

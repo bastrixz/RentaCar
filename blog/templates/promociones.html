@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/promociones.css' %}">
+        <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Rent Car</title>
+    </head>
+<body>
+    <div class="topnav" id="myTopnav">
+      <a href="{% url 'inicio' %}">Inicio</a>
+      <a href="{% url 'promociones' %}">Promociones</a>
+      <a href="{% url 'galeria' %}">Galeria</a>
+      <a href="{% url 'registro' %}" >Registro</a>
+      <a href="{% url 'contacto' %}" class="active">Contacto</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  <div class="texto1">
+    <h1>Promociones</h1>
+    <p>Las promociones que nosotros tenemos, son respecto a distintos tipos de clientes, en la siguiente sección puedes encontrarlas:</p>
+      <div class="union">
+          <div class="container">
+            <img src="{% static 'img/img-10.jpg' %}" alt="Avatar" class="image">
+            <div class="overlay">
+              <div class="text">Promoción por tu cumpleaños, al arrendar por 1 semana te damos 2 dias gratis!</div>
+              
+            </div>
+          </div>
+          <div class="container">
+              <img src="{% static 'img/img-9.jpg' %}" alt="Avatar" class="image">
+              <div class="overlay">
+                <div class="text">Promoción ejecutiva solo para socios</div>
+              </div>
+            </div>
+            <div class="container">
+                <img src="{% static 'img/img-7.jpg' %}" alt="Avatar" class="image">
+                <div class="overlay">
+                  <div class="text">Promoción por estudiar en duoc</div>
+                </div>
+              </div>
+              <div class="container">
+                  <img src="{% static 'img/img-8.jpg' %}" alt="Avatar" class="image">
+                  <div class="overlay">
+                    <div class="text">Promoción cliente habitual</div>
+                  </div>
+                </div>
+                <div class="container">
+                    <img src="{% static 'img/img-5.jpg' %}" alt="Avatar" class="image">
+                    <div class="overlay">
+                      <div class="text">Promoción pagando con efectivo</div>
+                    </div>
+                  </div>  
+                  <div class="container">
+                      <img src="{% static 'img/img-4.jpg' %}" alt="Avatar" class="image">
+                      <div class="overlay">
+                        <div class="text">Promoción por el primer arriendo</div>
+                      </div>
+                    </div> 
+          </div>      
+  </div>  
+<footer>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+              <p>Contacto: +569 23 34 7643
+              </p>
+              <p>Facebook: Rent Car
+              </p>
+              <p>Instagram: RentCar_Oficial
+              </p>
+              <p>Mail: Rentcar@rent.com
+                <a href="Mail:rentcar@rent.com"></a>
+              </p>
+          </div>
+          <div class="col-sm-12 col-md-6" style="margin-top:20px;">
+            <img id= "imgLogo1" src="{% static 'img/whatsapp.png' %}" alt="logo rent car" />
+            <img id= "imgLogo2" src="{% static 'img/facebook.png' %}" alt="logo rent car" />
+            <img id= "imgLogo3" src="{% static 'img/instagram.png' %}" alt="logo rent car" />
+            <img id= "imgLogo4" src="{% static 'img/correo.png' %}" alt="logo rent car" />
+          </div>
+          <p>
+              &copy;Todos los derechos reservados a Rent Car - Desarollo Web y Mobile
+          </p>
+        </div>
+      </div>
+</footer>
+</body>
+</html>
