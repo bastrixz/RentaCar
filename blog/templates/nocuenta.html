@@ -21,6 +21,15 @@
       <a href="{% url 'galeria' %}">Galeria</a>
       <a href="{% url 'registro' %}" >Registro</a>
       <a href="{% url 'contacto' %}" class="active">Contacto</a>
+      {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}">Salir</a>
+      {% else %}
+        <a href="{% url 'login' %}">Login</a>
+      {% endif %}
+      {% if request.user.is_superuser %}
+        <a href="../admin/" style="color: yellow;">Admin panel</a>
+        <a href="{% url 'autoregistro' %}">Registrar auto</a>
+      {% endif %}
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
@@ -38,24 +47,11 @@
     <div class="cuentabox">
         <p class="avatar"><img src="{% static 'img/1.jpg' %}" alt="logo"></p>
         <h1>Registro</h1>
-            <form>
-                <label id="Nombre">Nombre de usuario</label>
-                <input type="text" placeholder="Ingrese Nombre de usuario" required>
-
-                <label id="Nombres">Nombre</label>
-                <input type="text" placeholder="Ingrese Nombre" required>
-            
-                <label id="Apellido">Apellidos</label>
-                <input type="text" placeholder="Ingrese sus apellidos" required>
-                        
-                <label id="mail">Email</label>
-                <input type="text" placeholder="Ingrese su correo" required>
-
-                <label id="password">contraseña</label>
-                <input type="password" placeholder="Ingrese su contraseña" required>
-                <button type="submit" id="btn">Registrar</button>
-                <p><a href="{% url 'registro' %}">Ya tengo cuenta</a></p>
-            </form>
+        <form method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit">Sign up</button>
+        </form>
     </div>
             
 </body>

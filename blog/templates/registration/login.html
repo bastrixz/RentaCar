@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,13 +22,9 @@
         <a href="{% url 'registro' %}" >Registro</a>
         <a href="{% url 'contacto' %}" class="active">Contacto</a>
         {% if user.is_authenticated %}
-        <a href="{% url 'logout' %}">Salir</a>
+            <a href="{% url 'logout' %}">Salir</a>
         {% else %}
             <a href="{% url 'login' %}">Login</a>
-        {% endif %}
-        {% if request.user.is_superuser %}
-            <a href="../admin/" style="color: yellow;">Admin panel</a>
-            <a href="{% url 'autoregistro' %}">Registrar auto</a>
         {% endif %}
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
@@ -45,19 +42,28 @@
         </script>
     <div class="loginbox">
         <p class="avatar"><img src="{% static 'img/1.jpg' %}" alt="logo"></p>
-        <h1>Login </h1>
+        <h1>Login</h1>
+        <form method="post">
+            {% csrf_token %}
             <label id="username">Nombre de usuario </label>
-            <input type="text" placeholder="Ingrese Nombre de usuario" required>
-
+            {{ form.username }}
             <label id="password">Contraseña</label>
-            <input type="password" placeholder="Ingrese contraseña" required>
-        
+            {{ form.password }}
             <input type="submit" value="iniciar sesion">
-
             <a href="#"> Perdi mi contraseña</a>
-            <a href="{% url 'nocuenta' %}">No tengo cuenta</a>
+            <a href="{% url 'nocuenta' %}">No tengo cuenta</a>   
+
+            {% block content %}
+                {% if user.is_authenticated %}
+                Hi {{ user.username }}!
+                    <p><a href="{% url 'logout' %}">logout</a></p>
+                    {% else %}
+                    <p>You are not logged in</p>
+                    <a href="{% url 'login' %}">login</a>
+                {% endif %}
+            {% endblock %}        
+                        
         </form>
     </div>
-    
 </body>
 </html>

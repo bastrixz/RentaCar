@@ -21,7 +21,7 @@
         <a href="{% url 'registro' %}" >Registro</a>
         <a href="{% url 'contacto' %}" class="active">Contacto</a>
         {% if user.is_authenticated %}
-        <a href="{% url 'logout' %}">Salir</a>
+            <a href="{% url 'logout' %}">Salir</a>
         {% else %}
             <a href="{% url 'login' %}">Login</a>
         {% endif %}
@@ -45,17 +45,10 @@
         </script>
     <div class="loginbox">
         <p class="avatar"><img src="{% static 'img/1.jpg' %}" alt="logo"></p>
-        <h1>Login </h1>
-            <label id="username">Nombre de usuario </label>
-            <input type="text" placeholder="Ingrese Nombre de usuario" required>
-
-            <label id="password">Contraseña</label>
-            <input type="password" placeholder="Ingrese contraseña" required>
-        
-            <input type="submit" value="iniciar sesion">
-
-            <a href="#"> Perdi mi contraseña</a>
-            <a href="{% url 'nocuenta' %}">No tengo cuenta</a>
+        <h1>Nuevo Auto </h1>
+        <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Save</button>
         </form>
     </div>
     
