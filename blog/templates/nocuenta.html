@@ -20,7 +20,7 @@
       <a href="{% url 'promociones' %}">Promociones</a>
       <a href="{% url 'galeria' %}">Galeria</a>
       <a href="{% url 'registro' %}" >Registro</a>
-      <a href="{% url 'contacto' %}" class="active">Contacto</a>
+      <a href="{% url 'contacto' %}" >Contacto</a>
       {% if user.is_authenticated %}
         <a href="{% url 'logout' %}">Salir</a>
       {% else %}

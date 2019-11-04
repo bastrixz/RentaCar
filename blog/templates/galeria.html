@@ -17,9 +17,9 @@
     <div class="topnav" id="myTopnav">
       <a href="{% url 'inicio' %}">Inicio</a>
       <a href="{% url 'promociones' %}">Promociones</a>
-      <a href="{% url 'galeria' %}">Galeria</a>
+      <a href="{% url 'galeria' %}" class="active">Galeria</a>
       <a href="{% url 'registro' %}" >Registro</a>
-      <a href="{% url 'contacto' %}" class="active">Contacto</a>
+      <a href="{% url 'contacto' %}" >Contacto</a>
       {% if user.is_authenticated %}
         <a href="{% url 'logout' %}">Salir</a>
       {% else %}
@@ -62,92 +62,7 @@
         {% endfor %}
     </div>
     <!-- Portfolio Gallery Grid -->
-    <div class="row">
-      <div class="column">
-        <div class="content">
-          <img src="{% static 'img/img-auto1.jpg' %}" alt="Mountains" style="width:100%">
-          <h3>Lamborghini </h3>
-          <p>Spyder Huracan Evo 2019</p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="content">
-          <img src="{% static 'img/img-auto2.jpg' %}" alt="Lights" style="width:100%">
-          <h3>Maserati</h3>
-          <p>2017 GranCabrio MC</p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="content">
-          <img src="{% static 'img/img-3.jpg' %}" alt="Nature" style="width:100%">
-          <h3>Maserati</h3>
-          <p>2017 GranTurismo Sport</p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="content">
-          <img src="{% static 'img/img-4.jpg' %}" alt="Mountains" style="width:100%">
-          <h3>Lamborghini</h3>
-          <p>2018-19 Widebody Aerodynamik-Kit</p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="content">
-          <img src="{% static 'img/img-5.jpg' %}" alt="Mountains" style="width:100%">
-          <h3>Mercedes-Benz</h3>
-          <p>2017 Vision Mercedes-Maybach 6 Cabriolet</p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="content">
-          <img src="{% static 'img/img-6.jpg' %}" alt="Mountains" style="width:100%">
-          <h3>BUGATTI</h3>
-          <p>2014 Mansory Veyron Linea Vivere</p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="content">
-          <img src="{% static 'img/img-7.jpg' %}" alt="Mountains" style="width:100%">
-          <h3>Bmw Serie 6</h3>
-          <p> 2019 BMW 6 Series Interior azul</p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="content">
-          <img src="{% static 'img/img-8.jpg' %}" alt="Mountains" style="width:100%">
-          <h3>Porsche Boxster Spyder</h3>
-          <p> 3er generación de Porsche 718 Spyder con 420 CV</p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="content">
-          <img src="{% static 'img/img-9.jpg' %}" alt="Mountains" style="width:100%">
-          <h3>Lincoln</h3>
-          <p>2018 Navigator L Black Label</p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="content">
-          <img src="{% static 'img/img-10.jpg' %}" alt="Mountains" style="width:100%">
-          <h3>Rolls-Royce</h3>
-          <p>2017 Dawn in Fuxia</p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="content">
-          <img src="{% static 'img/img-11.jpg' %}" alt="Mountains" style="width:100%">
-          <h3>Ferrari</h3>
-          <p>2017 488 Challenge</p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="content">
-          <img src="{% static 'img/img-12.jpg' %}" alt="Mountains" style="width:100%">
-          <h3>McLaren</h3>
-          <p>2015-16 540C Coupe</p>
-        </div>
-      </div>
-    </div>
+    
     <!-- END MAIN -->
   </div>
 
