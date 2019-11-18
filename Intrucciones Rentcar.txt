@@ -1,0 +1,13 @@
+Rent Car 
+Integrantes: Bastian Morales - Javiera Lillo - Alejandro Silva
+
+Nuestro proyecto Rent Car consiste en arrendar vehiculos de alta gama, de está forma 
+nosotros hicimos un formulario que estos se registraran, y al ingresar al super usuario (Usuario: 1 Password: 1, 
+este permitiera ingresar los vehiculos que nosotros tenemos disponibles en la empresa, de está forma permitira mostrar
+en galeria los vehiculos que nosotros iremos ingresando o eliminando mediante su disponibilidad, también cuenta con un registro
+de nuestros clientes y donde estos mismos puedan ingresar sus datos para poder comenzar a arrendar los vehiculos.
+
+1.- Ingresar al Cmd en la carpeta con myvenv\Scripts\activate 
+2.- para hacer correr la maquina ingresamos manage.py runserver
+
+
